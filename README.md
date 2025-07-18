@@ -48,26 +48,54 @@ src/
 
 ---
 
-## ¿Cómo ejecutar el proyecto?
+##  ¿Cómo ejecutar el proyecto?
 
-1. Clonar el repositorio
+1. **Clonar el repositorio**
+
+```bash
 git clone https://github.com/julianctsistemas/todo-list-julian-dev.git
 cd todo-list-julian-dev
-2. Instalar dependencias
+```
+
+2. **Instalar dependencias**
+
+```bash
 npm install
-3. Configurar la base de datos con Prisma
+```
+
+3. **Configurar la base de datos con Prisma**
+
+```bash
 npx prisma db push
-Esto crea la base de datos SQLite (dev.db) con la tabla Task.
-4. Ejecutar el servidor de desarrollo
+```
+
+Esto crea la base de datos SQLite (`dev.db`) con la tabla `Task`.
+
+4. **Ejecutar el servidor de desarrollo**
+
+```bash
 npm run dev
-Luego abre en tu navegador:
- http://localhost:3000
+```
 
-Herramientas útiles para desarrollo
+Luego abre tu navegador en:  
+[http://localhost:3000](http://localhost:3000)
+
+---
+
+###  Herramientas útiles para desarrollo
+
+Ejecuta Prisma Studio para visualizar la base de datos:
+
+```bash
 npx prisma studio
-Esto abrirá un panel visual para explorar la base de datos en:
- http://localhost:5555
+```
 
- Autor
-Desarrollado por Julián Andres Carreño Tejada
+Esto abrirá un panel visual en:  
+[http://localhost:5555](http://localhost:5555)
+
+---
+
+##  Autor
+
+Desarrollado por **Julián Andres Carreño Tejada**  
 Prueba Técnica - Desarrollador Junior Full Stack
