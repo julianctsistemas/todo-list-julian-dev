@@ -46,8 +46,6 @@ src/
 ```
 
 
----
-
 ##  ¿Cómo ejecutar el proyecto?
 
 1. **Clonar el repositorio**
@@ -63,13 +61,41 @@ cd todo-list-julian-dev
 npm install
 ```
 
+---
+
+###  Configurar variables de entorno
+
+Antes de ejecutar Prisma, necesitas crear un archivo `.env` en la raíz del proyecto con la siguiente variable:
+
+```dotenv
+DATABASE_URL="file:./dev.db"
+```
+
+Puedes crearlo manualmente o ejecutar este comando en tu terminal:
+
+```bash
+echo 'DATABASE_URL="file:./dev.db"' > .env
+```
+
+---
+
 3. **Configurar la base de datos con Prisma**
 
 ```bash
 npx prisma db push
 ```
 
-Esto crea la base de datos SQLite (`dev.db`) con la tabla `Task`.
+Esto crea la base de datos SQLite (`dev.db`) y sincroniza el esquema definido en `prisma/schema.prisma`.
+
+Si ves un error como:
+
+```
+Error: Environment variable not found: DATABASE_URL
+```
+
+Asegúrate de haber creado correctamente el archivo `.env` como se indicó en el paso anterior.
+
+---
 
 4. **Ejecutar el servidor de desarrollo**
 
@@ -84,13 +110,13 @@ Luego abre tu navegador en:
 
 ###  Herramientas útiles para desarrollo
 
-Ejecuta Prisma Studio para visualizar la base de datos:
+Ejecuta Prisma Studio para visualizar y editar la base de datos desde una interfaz web:
 
 ```bash
 npx prisma studio
 ```
 
-Esto abrirá un panel visual en:  
+Esto abrirá un panel en:  
 [http://localhost:5555](http://localhost:5555)
 
 ---
