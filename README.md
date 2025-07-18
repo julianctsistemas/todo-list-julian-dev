@@ -27,29 +27,32 @@ Esta aplicación web permite registrar, ver, completar y eliminar tareas. Ha sid
 
 ## Estructura del Proyecto
 
+```
 src/
-├── components/ → Componente visual de cada tarea
-│ └── TaskItem.tsx
-├── lib/ → Cliente de Prisma
-│ └── db.ts
+├── components/           → Componente visual de cada tarea
+│   └── TaskItem.tsx
+├── lib/                  → Cliente de Prisma
+│   └── db.ts
 ├── pages/
-│ ├── api/
-│ │ └── tasks/ → Rutas API para manejar tareas
-│ │ ├── index.ts # GET y POST
-│ │ └── [id].ts # PATCH y DELETE
-│ └── index.tsx → Página principal (UI)
+│   ├── api/
+│   │   └── tasks/        → Rutas API para manejar tareas
+│   │       ├── index.ts  # GET y POST
+│   │       └── [id].ts   # PATCH y DELETE
+│   └── index.tsx         → Página principal (UI)
 ├── styles/
-│ └── globals.css → Tailwind
+│   └── globals.css       → Tailwind
 ├── types/
-│ └── task.ts → Tipado de la tarea
+│   └── task.ts           → Tipado de la tarea
+```
+
 
 ---
 
 ## ¿Cómo ejecutar el proyecto?
 
 1. Clonar el repositorio
-git clone https://github.com/tu-usuario/tu-repo.git
-cd tu-repo
+git clone https://github.com/julianctsistemas/todo-list-julian-dev.git
+cd todo-list-julian-dev
 2. Instalar dependencias
 npm install
 3. Configurar la base de datos con Prisma
